@@ -1,0 +1,24 @@
+app:
+  name: "identify-dev"
+  port: 8080
+  read_timeout: 10
+  write_timeout: 10
+
+log:
+  level: "debug"
+  format: "console"
+
+db:
+  host: "localhost"
+  port: 5432
+  user: "postgres"
+  password: "postgres"
+  name: "identify"
+  sslmode: "disable"
+  dsn: "" # Sẽ được ghi đè bằng env var nếu cần
+
+jwt:
+  access_token_ttl_sec: 30
+  refresh_token_ttl_sec: 60
+  access_secret_key: "access-secret-key-dev"
+  refresh_secret_key: "refresh-secret-key-dev"

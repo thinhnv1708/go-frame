@@ -1,0 +1,24 @@
+app:
+  name: "identify-prod"
+  port: 8080
+  read_timeout: 30
+  write_timeout: 30
+
+log:
+  level: "info"
+  format: "json"
+
+db:
+  host: "localhost"
+  port: 5432
+  user: "postgres"
+  password: "postgres"
+  name: "identify"
+  sslmode: "disable"
+  dsn: ""
+
+jwt:
+  access_token_ttl_sec: 900 # 15 mins
+  refresh_token_ttl_sec: 604800 # 7 days
+  access_secret_key: ""
+  refresh_secret_key: ""
